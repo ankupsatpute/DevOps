@@ -8,8 +8,12 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 ### Prerequisites
 1. EC2 Instance 
    - With Internet Access
-   - Security Group with Port `8080` open for internet
-1. Java 11 should be installed  
+   - Security Group with Port `8080` open for interne.
+
+2. If you want to change the Hostname of the machine .
+   - Then Go to file ( vi /etc/hostname )
+   - Then We need to reboot the machine ( sudo rebbot or init 6)
+4. Java 11 should be installed  
 
 
 ## Install Jenkins
