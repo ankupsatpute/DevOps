@@ -39,6 +39,12 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
    `Note`: Port should be opened in the Security group 
    ```bash
    http://<Public-IP>:9000
+   
+4. By default Username and Password Is 
+    Username :- admin
+    Password :- admin
+    
+5. In the 1st Loggin they  Ask to chnage the passowrd .
    ```
 --------------------------------------------------------------------------------------
 
