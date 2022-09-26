@@ -27,7 +27,12 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
 2. Change ownershipt to the user and Switch to Linux binaries directory to start service
    ```bash
    chown -R <sonar_user>:<sonar_user_group> /opt/sonarqube-x.x  
-   cd /opt/sonarqube-x.x/bin/linux-x86-64   
+   cd /opt/sonarqube-x.x/bin/linux-x86-64  
+   
+   bin  conf  COPYING  data  dependency-license.json  elasticsearch  extensions  lib  logs  temp  web
+   
+   
+   
    ./sonar.sh start
    ```
 3. Connect to the SonarQube server through the browser. It uses port 9000.   
@@ -35,7 +40,32 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
    ```bash
    http://<Public-IP>:9000
    ```
+--------------------------------------------------------------------------------------
 
+Note :- If you want to chang the Default setting for Sonar Qube Server .
+1) Go to the Directory Where Sonar Qube Install example.
+    cd /opt
+2) Then list ouu the all Fil by using the command ls
+      ls
+          bin  conf  COPYING  data  dependency-license.json  elasticsearch  extensions  lib  logs  temp  web
+
+3) Then Go instide the CONF directory 
+    cd Conf
+    
+4) After that again list out the file .
+    ls
+    sonar.properties  wrapper.conf
+5) Open it 
+   cat or vi sonar.properties
+   --------------------------------------------------------------------------
+   If you want to check what happend or error then go to the LOG  directory .
+   
+   bin  conf  COPYING  data  dependency-license.json  elasticsearch  extensions  lib  logs  temp  web
+   cd logs
+   ls
+   cat sonar.20220926.log
+   
+   # reading the error message file .
    ## 🧹 CleanUp  
    1. Stop SonarQube server
    ```sh 
